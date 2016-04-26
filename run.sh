@@ -1,6 +1,6 @@
 #!/bin/bash
 
-running_container_id=`echo $(docker ps -qa --no-trunc -f 'ancestor=enda-static' -f "status=running") | sed -e "s/[\r\n]\+/ /g"`
+running_container_id=`echo $(docker ps -qa --no-trunc -f 'ancestor=enda-static' -f 'status=running') | sed -e "s/[\r\n]\+/ /g"`
 
 docker build -t enda-static .
 docker run -d \
@@ -9,8 +9,8 @@ docker run -d \
   enda-static
 
 if [ -n "$running_container_id" ]; then
-  echo 'killing old running container'
-  docker kill -s QUIT $running_container_id
-else
-  echo 'There is no old container'
+  echo 'Stopping/removing old container...'
+  docker stop $running_container_id
+  docker rm $running_container_id
+  echo 'Done!'
 fi

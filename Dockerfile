@@ -1,7 +1,7 @@
 FROM ubuntu:16.04
 
 RUN apt-get update
-RUN apt-get install -y nginx
+RUN apt-get install -y nginx-extras
 
 RUN mkdir -p /tmp/nginx/cache/thumb
 RUN \

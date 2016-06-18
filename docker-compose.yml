@@ -4,4 +4,3 @@ enda-static:
     VIRTUAL_HOST: static.endaaman.me,static.enda.local
   volumes:
     - /var/uploaded/enda:/var/uploaded/enda
-  restart: always

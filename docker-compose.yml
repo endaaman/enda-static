@@ -1,6 +1,6 @@
 enda-static:
   build: .
   environment:
-    VIRTUAL_HOST: static.endaaman.me,static.enda.local
+    VIRTUAL_HOST: static.endaaman.me,static.enda.dev
   volumes:
-    - /var/uploaded/enda:/var/uploaded/enda
+    - /var/shared/enda:/var/shared/enda

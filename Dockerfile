@@ -9,7 +9,6 @@ RUN \
   rm /etc/nginx/sites-enabled/default
 
 ADD nginx/enda-static.conf /etc/nginx/sites-enabled
-VOLUME /var/shared/enda
 
-CMD ["/usr/sbin/nginx"]
 EXPOSE 80 443
+CMD ["/usr/sbin/nginx"]

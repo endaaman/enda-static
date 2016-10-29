@@ -1,5 +1,6 @@
 enda-static:
   image: endaaman/static.endaaman.me
+  container_name: enda-static
   environment:
     VIRTUAL_HOST: static.endaaman.me,static.enda.dev
   volumes:

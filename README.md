@@ -7,7 +7,7 @@ Main content is [`nginx/enda-static.conf`](https://github.com/endaaman/static.en
 ### features
 
 - resize/crop by query
-- safe with not image files
+- safe with non-image files
 - full caching
 
 
